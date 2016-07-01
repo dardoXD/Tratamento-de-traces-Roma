@@ -25,10 +25,10 @@ def Le_Linha(arquivo):
 
     Percorre_Arquivo(arquivo, "(")
     buffer = Percorre_Arquivo(arquivo, " ")
-    carro.set_x(str(buffer))
+    carro.set_x(float(buffer))
 
     buffer = Percorre_Arquivo(arquivo, ")")
-    carro.set_y(str(buffer))
+    carro.set_y(float(buffer))
 
     return carro
 
@@ -51,3 +51,5 @@ def Cria_Arquivo_Auxiliar():
 
     texto.close()
     arquivo.close()
+
+

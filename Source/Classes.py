@@ -1,3 +1,5 @@
+from geopy.distance import vincenty
+
 class veiculo(object):
     def set_id(self, i):
         self.id = i
@@ -12,10 +14,14 @@ class veiculo(object):
         return str(self.data)
 
     def set_x(self, a):
-        self.x = a
+        origem = (41.9, 12.4)
+        auxiliar = (a, 0.0)
+        self.x = vincenty(auxiliar, origem).kilometers
 
     def set_y(self, b):
-        self.y = b
+        origem = (41.9, 12.4)
+        auxiliar = (b, 0.0)
+        self.y = vincenty(auxiliar, origem).kilometers
 
     def set_horario(self, h):
         self.horario = h

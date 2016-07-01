@@ -24,6 +24,9 @@ while arquivo.readline():
     auxiliar = Le_Linha(arquivo)
     if auxiliar.get_data() == data:
         lista_veiculos += [auxiliar]
+    if auxiliar.get_data() > data:
+        break
+
 print("Criação de lista de veiculos completada com sucesso")
 atual = time.time()
 print(atual-ini)
